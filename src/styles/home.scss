@@ -1,0 +1,148 @@
+#home {
+  width: 100%;
+  height: 90vh;
+  display: flex;
+
+  > section {
+    width: 100%;
+
+    &:first-of-type {
+      padding-left: $p;
+
+      > div {
+        border-top: 1px solid $color6_2;
+        height: 100%;
+        padding-top: 6rem;
+        > h1 {
+          font: 900 4rem $text1;
+        }
+
+        .typewriterpara {
+          margin: 20px 0;
+          height: 20px;
+          letter-spacing: 5px;
+        }
+
+        > div {
+          display: flex;
+          margin: 5rem 0;
+          width: 70%;
+          gap: 4rem;
+          align-items: center;
+          > a {
+            &:first-of-type {
+              background-color: purple;
+              color: $color1;
+              padding: 1rem 2.5rem;
+              transition: all 0.3s;
+              &:hover {
+                background-color: rgb(0, 113, 128);
+              }
+            }
+            &:last-of-type {
+              font: 600 1.2rem $text2;
+              color: $color5;
+              display: flex;
+              align-items: center;
+            }
+          }
+        }
+
+        aside {
+          display: flex;
+          justify-content: space-between;
+          width: 70%;
+        }
+
+        article {
+          margin: 2rem 0;
+          width: 10rem;
+          color: $color5;
+          position: relative;
+
+          &::after {
+            content: "";
+            background-color: $color4;
+            width: 100%;
+            height: 5rem;
+            border-radius: 50px;
+            position: absolute;
+            top: 20%;
+            left: 20%;
+            z-index: -1;
+          }
+          > p {
+            font: 900 2rem $text1;
+          }
+          > span {
+            font: 500 1rem $text2;
+          }
+        }
+
+        article[data-special] {
+          width: 25rem;
+        }
+      }
+    }
+
+    &:last-of-type {
+      border-top: 1px solid $color6_2;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: center;
+      overflow-x: hidden;
+
+      &::after {
+        content: "";
+        width: 40vmax;
+        height: 40vmax;
+        background-color: $color3;
+        position: absolute;
+        z-index: -1;
+        border-radius: 50%;
+      }
+
+      > img {
+        width: 40vmax;
+        object-fit: contain;
+        height: 40vmax;
+      }
+    }
+  }
+
+  > svg {
+    position: absolute;
+    font-size: 4rem;
+    color: rgb(12, 1, 12);
+    left: 50%;
+    bottom: 5%;
+    transform: translateX(-50%);
+    animation: animateSvg 0.7s infinite linear alternate;
+  }
+}
+/* Add this CSS to your stylesheet */
+
+button.download-button {
+  background-color: rgba(255, 255, 255, 0.1); /* Transparent background */
+  border: 2px solid white; /* Border to make it stand out */
+  padding: 15px 30px; /* Bigger padding for a larger button */
+  font-size: 18px; /* Larger font size */
+  border-radius: 10px; /* Rounded corners */
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button.download-button a {
+  text-decoration: none;
+  color: white; /* White text color */
+}
+
+button.download-button:hover {
+  background-color: rgba(255, 255, 255, 0.3); /* Slightly less transparent on hover */
+  color: black; /* Change text color on hover */
+}
+
+button.download-button a:hover {
+  color: black; /* Ensure text color change on hover */
+}

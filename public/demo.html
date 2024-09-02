@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>We are working on it</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #f3e5f5, #e1bee7);
+            font-family: 'Poppins', sans-serif;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+            color: #333;
+            padding: 20px;
+            border-radius: 15px;
+            background-color: rgba(255, 255, 255, 0.8);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: relative;
+            max-width: 80%;
+        }
+
+        .message {
+            font-size: 2.5em;
+            position: relative;
+            animation: fadeIn 2s ease-in-out forwards;
+        }
+
+        .emoji {
+            font-size: 1.5em;
+            display: block;
+            margin-top: 10px;
+            animation: bounce 1.5s infinite;
+        }
+
+        .underline {
+            width: 0;
+            height: 4px;
+            background-color: #ff4500;
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: expand 2s 2s ease-in-out forwards;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                top: 20px;
+            }
+            100% {
+                opacity: 1;
+                top: 0;
+            }
+        }
+
+        @keyframes expand {
+            0% {
+                width: 0;
+            }
+            100% {
+                width: 100%;
+            }
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-20px);
+            }
+            60% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .bubble {
+            width: 15px;
+            height: 15px;
+            background-color: #ff4500;
+            border-radius: 50%;
+            position: absolute;
+            bottom: -50px;
+            animation: bubble 7s infinite;
+        }
+
+        @keyframes bubble {
+            0% {
+                bottom: -50px;
+                opacity: 0;
+                transform: scale(0);
+            }
+            50% {
+                opacity: 1;
+            }
+            100% {
+                bottom: 110%;
+                opacity: 0;
+                transform: scale(1.5);
+            }
+        }
+
+        .bubble:nth-child(2) {
+            left: 20%;
+            animation-duration: 7s;
+            animation-delay: 2s;
+        }
+
+        .bubble:nth-child(3) {
+            left: 40%;
+            animation-duration: 6s;
+            animation-delay: 4s;
+        }
+
+        .bubble:nth-child(4) {
+            left: 60%;
+            animation-duration: 8s;
+            animation-delay: 1s;
+        }
+
+        .bubble:nth-child(5) {
+            left: 80%;
+            animation-duration: 9s;
+            animation-delay: 3s;
+        }
+
+        /* Mobile View */
+        @media (max-width: 600px) {
+            .container {
+                padding: 15px;
+                max-width: 90%;
+            }
+
+            .message {
+                font-size: 1.8em;
+            }
+
+            .emoji {
+                font-size: 1.2em;
+            }
+
+            .underline {
+                height: 3px;
+            }
+
+            .bubble {
+                width: 10px;
+                height: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="message">
+            🚧 We are working on it 
+            !! <b>Coming Soooon</b> !!🚧
+           
+            <div class="underline"></div>
+        </div>
+        <div class="emoji">🔧🔨</div>
+    </div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+</body>
+</html>
